@@ -2,14 +2,14 @@
 #include <ArduinoLog.h>
 
 void setup() {
-  Serial.begin(921600);
-  Log.begin(LOG_LEVEL, &Serial);
-  Log.notice(F(" " CR));
-  Log.notice(F("****** setup ******" CR));
-  delay(10000);
+    Serial.begin(115200);
+    Log.begin(LOG_LEVEL, &Serial);
+    delay(10000);
+    Log.notice(F(" " LF));
+    Log.notice(F("****** setup ******" NL));
 }
 
 void loop() {
-  Log.notice(F("****** loop ******" CR));
-  delay(2000);
-}  
+    delay(2000);
+    Log.notice(F("****** loop ******" NL));
+}
